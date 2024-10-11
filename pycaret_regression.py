@@ -7,12 +7,12 @@ Original file is located at
     https://colab.research.google.com/drive/1d_P47WSQsTscchjzP8IxfSxDeMQzGT4i
 """
 
-!pip install pycaret
+# !pip install pycaret
 
 from pycaret.regression import *
 import pandas as pd
 
-df = pd.read_csv('/content/drive/MyDrive/Colab Notebooks/boston.csv')
+df = pd.read_csv('/home/m-fayzi/Desktop/Pycaret/Datasets/boston.csv')
 print(df.info())
 
 """# Pycaret Regression"""
@@ -45,6 +45,6 @@ et_model = create_model('et')
 tune = tune_model(et_model)
 
 best = automl()
-best
+print(best)
 
 evaluate_model(et_model)
